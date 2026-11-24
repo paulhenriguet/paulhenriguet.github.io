@@ -96,6 +96,7 @@ h3{font-size:19px;margin:0 0 6px}
 .kv .val{font:15px "IBM Plex Mono",monospace;overflow-wrap:anywhere;flex:1 1 16em}
 .kv button{min-height:44px;padding:0 16px;border-radius:6px;border:1px solid var(--aqua);background:transparent;color:var(--aqua);font:600 14px "IBM Plex Sans",sans-serif;cursor:pointer}
 .kv button:hover,.kv button:focus-visible{background:var(--aqua);color:var(--deep);outline:none}
+.cvb{display:flex;flex-wrap:wrap;gap:20px 40px;align-items:center;justify-content:space-between}
 footer{background:var(--deep2);color:#8aa6a3;font:14px "IBM Plex Mono",monospace;padding:20px max(5vw,16px)}
 footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
 @media(max-width:900px){.stack,.how{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -110,6 +111,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
 <a class="l" href="projets.html">Projets</a>
 <a class="l" href="#parcours">Parcours</a>
 <a class="l" href="#approche">Approche</a>
+<a class="l" href="#cv">CV</a>
 <a class="l" href="#contact">Contact</a>
 </div></nav>
 
@@ -174,6 +176,17 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
 <div><div class="c">setenforce 1</div><h3>Sécurité par défaut</h3><p>SELinux en mode enforcing, durcissement CIS, comptes et secrets maîtrisés. On ne désactive pas une protection pour gagner du temps.</p></div>
 <div><div class="c">ansible-playbook site.yml</div><h3>Tout ce qui se répète s'automatise</h3><p>Ansible et GitLab CI pour que chaque environnement (dev, préprod, prod) soit reproductible et documenté.</p></div>
 <div><div class="c">journalctl -xe</div><h3>Diagnostiquer avant d'agir</h3><p>Mesurer, comprendre la cause, puis corriger. Les équipes internes m'appellent pour ça : trouver ce qui cloche vraiment.</p></div>
+</div>
+</div></section>
+
+<section class="band" id="cv"><div class="wrap cvb">
+<div>
+<h2>Mon CV</h2>
+<p class="sub" style="margin:0">Le détail de mes missions, technologies et formations, en une version PDF à jour.</p>
+</div>
+<div class="btns">
+<a class="btn p" href="cv.pdf" download="CV-Paul-Henri-Guet.pdf">Télécharger le CV (PDF)</a>
+<a class="btn" href="cv.pdf" target="_blank" rel="noopener" style="color:var(--ink)">Ouvrir dans le navigateur</a>
 </div>
 </div></section>
 
