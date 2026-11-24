@@ -48,7 +48,7 @@ h3{font-size:19px;margin:0 0 6px}
 .term .bar span{margin-left:8px}
 .term pre{margin:0;padding:18px 20px 22px;font:14px/1.6 "IBM Plex Mono",monospace;color:#cfe3e0;overflow-x:auto}
 .nf{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 28px;padding:0 20px 22px;font:14px/1.6 "IBM Plex Mono",monospace;color:#cfe3e0}
-.nf .logo{color:var(--acc);white-space:pre;line-height:1.25;font-size:13px}
+.nf .logo{width:112px;height:152px;display:block;margin-top:4px}
 .nf dl{margin:0;display:grid;grid-template-columns:max-content minmax(0,1fr);gap:1px 12px}
 .nf dt{color:var(--aqua);font-weight:600}
 .nf dd{margin:0;overflow-wrap:anywhere}
@@ -107,6 +107,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
 <nav><div class="wrap">
 <a class="me" href="#top">phg<b>@</b>linux</a>
 <a class="l" href="#stack">Stack</a>
+<a class="l" href="projets.html">Projets</a>
 <a class="l" href="#parcours">Parcours</a>
 <a class="l" href="#approche">Approche</a>
 <a class="l" href="#contact">Contact</a>
@@ -128,18 +129,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
 <div class="bar"><i></i><i></i><i></i><span>phg@marignane: ~</span></div>
 <pre><b style="color:var(--aqua)">phg@marignane</b>:~$ neofetch</pre>
 <div class="nf">
-<div class="logo" aria-hidden="true">██████╗ ██╗  ██╗
-██╔══██╗██║  ██║
-██████╔╝███████║
-██╔═══╝ ██╔══██║
-██║     ██║  ██║
-╚═╝     ╚═╝  ╚═╝
- ██████╗
-██╔════╝
-██║  ███╗
-██║   ██║
-╚██████╔╝
- ╚═════╝</div>
+<svg class="logo" id="logo" viewBox="0 0 112 152" aria-hidden="true"></svg>
 <div>
 <div class="hd"><b>phg</b>@marignane</div>
 <div class="rule">-----------------</div>
@@ -205,6 +195,9 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
 <script>
 {
 const nf=[["OS","RHEL / AlmaLinux"],["Rôle","Senior Consultant @ CGI"],["Mission","CEA Cadarache"],["Uptime","~6 ans"],["Conteneurs","Podman, Kubernetes"],["CI/CD","GitLab CI"],["Config","Ansible"],["Sécurité","SELinux enforcing, CIS"],["Formation","ENSEEIHT, Télécom & Réseaux"],["Locale","fr_FR.UTF-8"]];
+const G={P:['11110','10001','10001','11110','10000','10000','10000'],H:['10001','10001','10001','11111','10001','10001','10001'],C:['01110','10001','10000','10111','10001','10001','01111']};
+const px=[];[['P',0,0],['H',6,0],['C',0,8]].forEach(([k,ox,oy])=>G[k].forEach((r,y)=>[...r].forEach((b,x)=>{if(b==='1')px.push([(ox+x)*10,(oy+y)*10])})));
+document.getElementById('logo').innerHTML=px.map(([x,y])=>`<rect x="${x+2}" y="${y+2}" width="9" height="9" fill="#7a2614"/>`).join('')+px.map(([x,y])=>`<rect x="${x}" y="${y}" width="9" height="9" rx="1" fill="#ff5a36"/>`).join('');
 document.getElementById('nf').innerHTML=nf.map(([k,v])=>`<dt>${k}</dt><dd>${v.replace(/&/g,'&amp;')}</dd>`).join('');
 
 const stk=[
