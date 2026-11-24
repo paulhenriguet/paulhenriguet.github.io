@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Projets · Paul-Henri Guet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light dark;--bg:light-dark(#ffffff,#0b1416);--ink:light-dark(#0f1b1d,#e6efee);--mute:light-dark(#4a5a5c,#9fb3b1);--deep:#0f2a2e;--deep2:#0a1f22;--aqua:#9fe3d6;--acc:#ff5a36;--line:light-dark(#dfe6e5,#22393c);--card:light-dark(#f3f7f6,#112023)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "IBM Plex Sans",system-ui,sans-serif;overflow-x:clip}
+a{color:inherit}
+.wrap{max-width:1240px;margin:0 auto}
+.band{padding-block:clamp(36px,5vw,72px);padding-inline:max(5vw,16px)}
+nav{position:sticky;top:0;z-index:5;background:var(--deep2);color:#e6efee;padding:12px max(5vw,16px)}
+nav .wrap{display:flex;flex-wrap:wrap;gap:8px 22px;align-items:center}
+nav .me{font-family:"IBM Plex Mono",monospace;font-weight:600;margin-right:auto;text-decoration:none}
+nav .me b{color:var(--aqua)}
+nav a.l{text-decoration:none;opacity:.85;font-size:15px;padding:8px 0}
+nav a.l:hover,nav a.l:focus-visible,nav a.l.on{opacity:1;color:var(--aqua)}
+.hero{background:var(--deep);color:#e6efee}
+h1{font-size:clamp(36px,5vw,52px);line-height:1.05;letter-spacing:-.02em;margin:0 0 12px}
+.hero p{color:#cfdcda;max-width:40em;margin:0 0 22px;font-size:17px}
+.cmd{background:#07171a;border:1px solid #1f3b3f;border-radius:8px;padding:14px 18px;font:14px/1.7 "IBM Plex Mono",monospace;color:#cfe3e0;overflow-x:auto}
+.cmd b{color:var(--aqua)}
+.cmd .n{color:var(--acc);font-weight:600}
+.bar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:24px}
+.bar input,.bar select{font:16px "IBM Plex Sans",sans-serif;min-height:46px;padding:0 14px;border-radius:6px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
+.bar input{flex:1 1 260px}
+.bar input:focus-visible,.bar select:focus-visible{outline:2px solid var(--acc);outline-offset:1px}
+.bar label{display:flex;align-items:center;gap:8px;font-size:15px;color:var(--mute);min-height:44px;cursor:pointer}
+.bar label input{min-height:auto;flex:none;width:18px;height:18px;accent-color:var(--acc)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:20px;display:flex;flex-direction:column;gap:10px;text-decoration:none;transition:border-color .15s}
+.card:hover,.card:focus-visible{border-color:var(--acc);outline:none}
+.card h2{font:600 17px "IBM Plex Mono",monospace;margin:0;overflow-wrap:anywhere}
+.card p{margin:0;color:var(--mute);font-size:15px;flex:1}
+.card p.none{font-style:italic;opacity:.8}
+.meta{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:14px;color:var(--mute)}
+.meta span{white-space:nowrap;display:inline-flex;align-items:center;gap:6px}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font:13px "IBM Plex Mono",monospace;padding:3px 8px;border-radius:4px;border:1px solid var(--line);background:var(--bg)}
+.fork{font:12px "IBM Plex Mono",monospace;color:var(--acc);border:1px solid var(--acc);border-radius:4px;padding:1px 6px;margin-left:8px;vertical-align:2px}
+.msg{grid-column:1/-1;padding:28px;border:1px dashed var(--line);border-radius:8px;color:var(--mute);text-align:center}
+.sk{height:150px;border-radius:8px;background:linear-gradient(90deg,var(--card),var(--line),var(--card));background-size:200% 100%;animation:sh 1.2s linear infinite}
+@keyframes sh{to{background-position:-200% 0}}
+@media(prefers-reduced-motion:reduce){.sk{animation:none}.card{transition:none}}
+footer{background:var(--deep2);color:#8aa6a3;font:14px "IBM Plex Mono",monospace;padding:20px max(5vw,16px)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+footer a{color:var(--aqua)}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+<a class="me" href="index.html">phg<b>@</b>linux</a>
+<a class="l" href="index.html#stack">Stack</a>
+<a class="l on" href="projets.html" aria-current="page">Projets</a>
+<a class="l" href="index.html#parcours">Parcours</a>
+<a class="l" href="index.html#approche">Approche</a>
+<a class="l" href="index.html#contact">Contact</a>
+</div></nav>
+
+<header class="hero band"><div class="wrap">
+<h1>Projets perso</h1>
+<p>Labs, outils et expérimentations sur mon temps libre. La liste se met à jour automatiquement depuis mes dépôts GitHub publics.</p>
+<div class="cmd" aria-live="polite"><b>phg@marignane</b>:~$ gh repo list paulhenriguet --public<br><span id="sum">Chargement…</span></div>
+</div></header>
+
+<main class="band"><div class="wrap">
+<div class="bar">
+<input id="q" type="search" placeholder="Rechercher un projet…" aria-label="Rechercher un projet">
+<select id="lang" aria-label="Filtrer par langage"><option value="">Tous les langages</option></select>
+<label for="forks"><input id="forks" type="checkbox"> Afficher les forks</label>
+</div>
+<div class="grid" id="grid"><div class="sk"></div><div class="sk"></div><div class="sk"></div></div>
+</div></main>
+
+<footer><div class="wrap"><span>© 2026 Paul-Henri Guet</span><a href="https://github.com/paulhenriguet">github.com/paulhenriguet</a></div></footer>
+
+<script>
+{
+const USER='paulhenriguet';
+const HIDE=[USER+'.github.io'];
+const COL={Python:'#3572A5',Shell:'#89e051',Dockerfile:'#384d54',HTML:'#e34c26',JavaScript:'#f1e05a',TypeScript:'#3178c6',Go:'#00ADD8',YAML:'#cb171e','Jinja':'#a52a22',PHP:'#4F5D95',Makefile:'#427819',HCL:'#844FBA',CSS:'#563d7c'};
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fmt=d=>new Date(d).toLocaleDateString('fr-FR',{day:'numeric',month:'short',year:'numeric'});
+const grid=document.getElementById('grid'),sum=document.getElementById('sum');
+const q=document.getElementById('q'),lang=document.getElementById('lang'),forks=document.getElementById('forks');
+let repos=[];
+
+const render=()=>{
+ const t=q.value.trim().toLowerCase(),l=lang.value;
+ const list=repos.filter(r=>(forks.checked||!r.fork)&&(!l||r.language===l)&&(!t||(r.name+' '+(r.description||'')+' '+(r.topics||[]).join(' ')).toLowerCase().includes(t)));
+ grid.innerHTML=list.length?list.map(r=>`<a class="card" href="${esc(r.html_url)}">
+<h2>${esc(r.name)}${r.fork?'<span class="fork">fork</span>':''}</h2>
+${r.description?`<p>${esc(r.description)}</p>`:'<p class="none">Pas de description.</p>'}
+${(r.topics||[]).length?`<div class="tags">${r.topics.slice(0,6).map(x=>`<span class="tag">${esc(x)}</span>`).join('')}</div>`:''}
+<div class="meta">${r.language?`<span><i class="dot" style="background:${COL[r.language]||'#9fb3b1'}"></i>${esc(r.language)}</span>`:''}<span>★ ${Number(r.stargazers_count)||0}</span><span>Mis à jour le ${esc(fmt(r.pushed_at))}</span></div>
+</a>`).join(''):'<div class="msg">Aucun projet ne correspond à ce filtre.</div>';
+};
+
+const load=async()=>{
+ let data=null;
+ try{const c=JSON.parse(sessionStorage.getItem('repos')||'null');if(c&&Date.now()-c.t<600000)data=c.d;}catch(e){}
+ if(!data){
+  const r=await fetch(`https://api.github.com/users/${USER}/repos?per_page=100&sort=pushed`,{headers:{Accept:'application/vnd.github+json'}});
+  if(r.status===403)throw new Error('quota');
+  if(!r.ok)throw new Error('http '+r.status);
+  data=await r.json();
+  try{sessionStorage.setItem('repos',JSON.stringify({t:Date.now(),d:data}));}catch(e){}
+ }
+ repos=data.filter(r=>!HIDE.includes(r.name)&&!r.archived);
+ const own=repos.filter(r=>!r.fork).length;
+ sum.innerHTML=`<span class="n">${own}</span> dépôt${own>1?'s':''} public${own>1?'s':''}${repos.length>own?` · ${repos.length-own} fork${repos.length-own>1?'s':''}`:''}`;
+ [...new Set(repos.map(r=>r.language).filter(Boolean))].sort().forEach(x=>{const o=document.createElement('option');o.value=x;o.textContent=x;lang.appendChild(o)});
+ render();
+};
+
+q.addEventListener('input',render);lang.addEventListener('change',render);forks.addEventListener('change',render);
+load().catch(e=>{
+ sum.textContent='Erreur de chargement';
+ grid.innerHTML=`<div class="msg">${e.message==='quota'?'Limite de requêtes GitHub atteinte, réessayez dans quelques minutes.':'Impossible de charger les dépôts pour le moment.'}<br><a href="https://github.com/${USER}?tab=repositories">Voir directement sur GitHub</a></div>`;
+});
+}
+</script>
+</body>
+</html>
