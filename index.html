@@ -120,7 +120,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
 <p class="lead">Six ans à construire, durcir et automatiser des infrastructures Linux dans des environnements où l'erreur coûte cher : nucléaire, santé, secteur public. RHEL, conteneurs, CI/CD et sécurité by design.</p>
 <div class="btns">
 <a class="btn p" href="#contact">Me contacter</a>
-<a class="btn" href="#parcours">Voir le parcours</a>
+<a class="btn" href="projets.html">Voir mes projets</a>
 </div>
 <p class="where">Senior Consultant chez CGI · basé à Marignane (13)</p>
 </div>
@@ -185,12 +185,12 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
 </div>
 <div class="kv">
 <div class="row"><span class="lab">E-mail</span><span class="val" id="mail">guet.paulhenri@gmail.com</span><button type="button" data-c="mail" id="b-mail">Copier</button></div>
-<div class="row"><span class="lab">Empreinte de clé GPG</span><span class="val" id="gpg">4C9D A042 226D 736D 2F7C FBA1 6039 D0A3 3E74 6B16</span><button type="button" data-c="gpg" id="b-gpg">Copier</button></div>
+<div class="row"><span class="lab">GitHub</span><span class="val"><a href="https://github.com/paulhenriguet">github.com/paulhenriguet</a></span></div>
 <div class="row"><span class="lab">Localisation</span><span class="val">Marignane, Provence-Alpes-Côte d'Azur</span></div>
 </div>
 </div></section>
 
-<footer><div class="wrap"><span>© 2026 Paul-Henri Guet</span></div></footer>
+<footer><div class="wrap"><span>© 2026 Paul-Henri Guet</span><span>uptime: 6 ans · load average: raisonnable</span></div></footer>
 
 <script>
 {
@@ -205,7 +205,7 @@ const stk=[
  ["Conteneurs","Images, registres et orchestration.",[["Podman",1],["Buildah"],["Kubernetes",1],["Harbor"],["Traefik"]]],
  ["CI/CD","Pipelines et runners pour les équipes de développement.",[["GitLab CI/CD",1],["GitLab Runner",1],["Git"]]],
  ["Automatisation","Déploiements reproductibles, de la VM au service.",[["Ansible",1],["Python"],["Infra as Code"]]],
- ["Sécurité","Durcissement et conformité dès la conception.",[["SELinux",1],["CIS Benchmarks",1],["PKI / TLS"],["GPG"]]],
+ ["Sécurité","Durcissement et conformité dès la conception.",[["SELinux",1],["CIS Benchmarks",1],["PKI / TLS"]]],
  ["Services","Briques applicatives que je déploie et maintiens.",[["PostgreSQL"],["Apache"],["WildFly"],["Keycloak"]]]
 ];
 document.getElementById('stk').innerHTML=stk.map(([t,d,tags])=>`<div class="grp"><h3>${t}</h3><p>${d}</p><div class="tags">${tags.map(([n,k])=>`<span class="tag${k?' k':''}">${n}</span>`).join('')}</div></div>`).join('');
